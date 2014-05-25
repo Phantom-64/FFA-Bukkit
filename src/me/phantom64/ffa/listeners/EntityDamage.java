@@ -11,8 +11,10 @@ public class EntityDamage implements Listener {
     @EventHandler
     public void onEntityDamage(EntityDamageEvent e) {
         if (e.getEntity() instanceof Player) {
-            if (GameManager.isPlaying((Player) e.getEntity())) {
-                e.setCancelled(true);
+            if (e.getCause() == EntityDamageEvent.DamageCause.FALL) {
+                if (GameManager.isPlaying((Player)e.getEntity())) {
+                    e.setCancelled(true);
+                }
             }
         }
     }
