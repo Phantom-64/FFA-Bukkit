@@ -19,6 +19,14 @@ public class CommandLeave {
             } else {
                 GameManager.removePlayerFromGame(p);
                 LocationUtil.teleportPlayerFromArena(p);
+
+                if (p.getInventory() != null) {
+
+                    p.getInventory().setContents(CommandJoin.savedInventories.get(p.getName()));
+                    p.getInventory().setArmorContents(CommandJoin.savedInventories.get(p.getName()));
+
+                }
+
                 return;
             }
         }

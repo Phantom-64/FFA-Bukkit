@@ -10,7 +10,7 @@ public class AsyncPlayerChat implements Listener {
     @EventHandler
     public void onChat (AsyncPlayerChatEvent e) {
         if (GameManager.isPlaying(e.getPlayer())) {
-            e.setFormat("§3§l[§c§lFFA§3§l " + e.getFormat());
+            e.setFormat("§3§l[§c§lFFA§3§l] §r" + e.getFormat());
         }
     }
 
