@@ -1,0 +1,8 @@
+name: FFA
+main: me.phantom64.ffa.Core
+version: 1.0
+
+commands:
+  ffa:
+    description: The standard command for the FFA plugin.
+    usage: /<command>
