@@ -1,4 +1,4 @@
-FFA-Bukkit
+FFA
 ==========
 
 A Bukkit plugin which adds a new Gamemode called Free for All. This is where a player is teleported to a
