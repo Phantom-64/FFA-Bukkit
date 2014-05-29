@@ -20,8 +20,7 @@ public class Core extends JavaPlugin {
     public static Location exitSpawn;
 
     public void onEnable() {
-        getServer().getPluginManager().registerEvents(new BlockBreak(), this);
-        getServer().getPluginManager().registerEvents(new BlockPlace(), this);
+        getServer().getPluginManager().registerEvents(new BlockListener(), this);
         getServer().getPluginManager().registerEvents(new EntityDamage(), this);
         getServer().getPluginManager().registerEvents(new FoodLevelChange(), this);
         getServer().getPluginManager().registerEvents(new AsyncPlayerChat(), this);
