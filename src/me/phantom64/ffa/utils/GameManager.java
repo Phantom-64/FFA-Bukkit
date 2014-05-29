@@ -18,13 +18,16 @@ public class GameManager {
         return Core.ingame.contains(p);
     }
 
-    public static boolean isInt(String s) {
-        try {
-            Integer.parseInt(s);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
-        }
+    public static void givePlayerKit(Player p) {
+        PlayerInventory inv = p.getInventory();
+        inv.clear();
+        inv.setHelmet(new ItemStack(Material.IRON_PLATE));
+        inv.setChestplate(new ItemStack(Material.IRON_CHESTPLATE));
+        inv.setLeggings(new ItemStack(Material.IRON_LEGGINGS));
+        inv.setBoots(new ItemStack(Material.IRON_BOOTS));
+        inv.addItem(new ItemStack(Material.IRON_SWORD));
+        inv.addItem(new ItemStack(Material.BOW));
+        inv.addItem(new ItemStack(Material.ARROW, 16));
     }
 
 }
