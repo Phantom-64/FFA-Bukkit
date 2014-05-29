@@ -30,18 +30,14 @@ public class CommandJoin {
                 ItemStack[] armor = p.getInventory().getArmorContents();
                 ItemStack[] saveArmor = new ItemStack[armor.length];
 
-                for(int i = 0; i < inventory.length; i++)
-                {
-                    if(inventory[i] != null)
-                    {
+                for(int i = 0; i < inventory.length; i++) {
+                    if(inventory[i] != null) {
                         saveInventory[i] = inventory[i].clone();
                     }
                 }
 
-                for(int i = 0; i < armor.length; i++)
-                {
-                    if(armor[i] != null)
-                    {
+                for(int i = 0; i < armor.length; i++) {
+                    if(armor[i] != null) {
                         saveArmor[i] = armor[i].clone();
                     }
                 }
