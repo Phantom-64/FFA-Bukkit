@@ -18,17 +18,19 @@ public class CommandSetGameSpawn {
             p.sendMessage("§9Correct usage: §2/ffa setgamespawn <number>");
             return;
         } else {
-            if (GameManager.isInt(a[1])) {
-                Integer gameSpawn = Integer.parseInt(a[1]);
+
+            try {
+                int gameSpawn = Integer.parseInt(a[1]);
                 if (gameSpawn <= 10 && gameSpawn >= 1) {
                     LocationUtil.setGameSpawn(p.getLocation(), gameSpawn);
+                    p.sendMessage("§9Gamespawn " + gameSpawn + " set!");
                 } else {
-                    p.sendMessage("§9Illegal number. Bounds are from 1 to 10.");
+                    p.sendMessage("§9Invalid number. Bounds are from 1 to 10.");
                 }
-            } else {
-                p.sendMessage("§9Invalid argument.");
-                return;
+            } catch (NumberFormatException nfe) {
+                p.sendMessage("§9Invalid argument. Enter a number instead. Bounds are from 1 to 10.");
             }
+
         }
 
     }
