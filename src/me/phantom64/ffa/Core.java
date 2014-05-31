@@ -26,22 +26,22 @@ public class Core extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new AsyncPlayerChat(), this);
     }
 
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] a) {
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
         if (label.equalsIgnoreCase("ffa")) {
 
             if (sender instanceof Player) {
 
-                if (a[0].equalsIgnoreCase("join")) {
-                    CommandJoin.execute((Player) sender, a);
-                } else if (a[0].equalsIgnoreCase("leave")) {
-                    CommandLeave.execute((Player) sender, a);
-                } else if (a[0].equalsIgnoreCase("setgamespawn")) {
-                    CommandSetGameSpawn.execute((Player) sender, a);
-                } else if (a[0].equalsIgnoreCase("setexitspawn")) {
-                    CommandSetExitSpawn.execute((Player) sender, a);
-                } else if (a[0].equalsIgnoreCase("kickall")) {
-                    CommandKickAll.execute((Player) sender, a);
+                if (args[0].equalsIgnoreCase("join")) {
+                    CommandJoin.execute((Player) sender, args);
+                } else if (args[0].equalsIgnoreCase("leave")) {
+                    CommandLeave.execute((Player) sender, args);
+                } else if (args[0].equalsIgnoreCase("setgamespawn")) {
+                    CommandSetGameSpawn.execute((Player) sender, args);
+                } else if (args[0].equalsIgnoreCase("setexitspawn")) {
+                    CommandSetExitSpawn.execute((Player) sender, args);
+                } else if (args[0].equalsIgnoreCase("kickall")) {
+                    CommandKickAll.execute((Player) sender, args);
                 }
 
             } else {

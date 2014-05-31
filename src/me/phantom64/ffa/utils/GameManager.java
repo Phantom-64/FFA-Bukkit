@@ -1,7 +1,10 @@
 package me.phantom64.ffa.utils;
 
 import me.phantom64.ffa.Core;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
 
 public class GameManager {
 
