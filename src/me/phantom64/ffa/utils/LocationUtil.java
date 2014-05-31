@@ -12,10 +12,8 @@ public class LocationUtil {
 
     public static void teleportPlayerToArena(Player p) {
         Random random = new Random();
-        int num = new Random().nextInt(10);
-        if (num > 0) {
-            p.teleport(Core.gameSpawns[num]);
-        }
+        p.teleport(Core.gameSpawns[random.nextInt(10)]);
+        p.getInventory().clear();
     }
 
     public static void teleportPlayerFromArena(Player p) {
