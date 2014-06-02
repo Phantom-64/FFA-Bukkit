@@ -1,6 +1,7 @@
 name: FFA
 main: me.phantom64.ffa.Core
 version: 1.0
+author: Phantom_64
 
 commands:
   ffa:
